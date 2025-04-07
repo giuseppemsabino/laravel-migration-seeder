@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\TrainsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('prova');
-});
+Route::get('/', [TrainsController::class, 'index']);
