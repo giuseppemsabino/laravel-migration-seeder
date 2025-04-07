@@ -9,7 +9,7 @@ class TrainsController extends Controller
 {
     public function index(){
 
-        $trains= Train::all();
+        $trains= Train::orderBy('departure_time', 'asc')->get();
         // dd($trains);
 
         return view('index', compact('trains'));
